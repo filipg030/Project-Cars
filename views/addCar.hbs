@@ -1,0 +1,23 @@
+<div id="mainDiv">
+    <h2>Add car page</h2>
+    {{#if message }}
+    <div class="alert alert-success" role="alert">
+        {{message}}
+    </div>
+    {{/if}}
+    <form action="/addCar" method="GET">
+        <input type="hidden" value="NIE" name="ubezpieczony">
+        <input type="checkbox" value="TAK" name="ubezpieczony">Ubezpieczony
+        <br>
+
+        <input type="checkbox" value="TAK" name="benzyna">Benzyna
+        <br>
+
+        <input type="checkbox" value="TAK" name="uszkodzony">Uszkodzony
+        <br>
+
+        <input type="checkbox" value="TAK" name="naped">Naped 4x4
+        <br>
+        <input type="submit" value="Add" id="addSub">
+    </form>
+</div>

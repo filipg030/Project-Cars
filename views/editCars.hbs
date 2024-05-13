@@ -1,0 +1,74 @@
+<div id="mainDiv">
+    <h2>Edit Cars Page</h2>
+    <form method="get" action="/editCars" id="editCars">
+    </form>
+
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>Ubezpieczony</td>
+            <td>Benzyna</td>
+            <td>Uszkodzony</td>
+            <td>Naped4x4</td>
+            <td></td>
+        </tr>
+
+        {{#each cars}}
+        {{#if edit}}
+        <form action="/updateCars" method="get" id="updateCars">
+            <tr>
+                <td>{{_id}}</td>
+                <td>
+                    <select name="ubezpieczony" id="ubezpieczony" form="updateCars">
+                        <option value="TAK">TAK</option>
+                        <option value="NIE">NIE</option>
+                        <option value="BRAK">BRAK</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="benzyna" id="benzyna" form="updateCars">
+                        <option value="TAK">TAK</option>
+                        <option value="NIE">NIE</option>
+                        <option value="BRAK">BRAK</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="uszkodzony" id="uszkodzony" form="updateCars">
+                        <option value="TAK">TAK</option>
+                        <option value="NIE">NIE</option>
+                        <option value="BRAK">BRAK</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="naped" id="naped" form="updateCars">
+                        <option value="TAK">TAK</option>
+                        <option value="NIE">NIE</option>
+                        <option value="BRAK">BRAK</option>
+                    </select>
+                </td>
+        </form>
+        <td>
+            <input type="submit" name="{{_id}}" value="UPDATE" class="deletebutt" formaction="/updateCars"
+                form="updateCars">
+        </td>
+        <td>
+            <input type="submit" name="{{_id}}" value="CANCEL" class="infobutt" formaction="/editCars" form="editCars">
+        </td>
+        </tr>
+        {{else}}
+        <tr>
+            <td>{{_id}}</td>
+            <td>{{ubezpieczony}}</td>
+            <td>{{benzyna}}</td>
+            <td>{{uszkodzony}}</td>
+            <td>{{naped}}</td>
+            <td>
+                <input type="submit" name="{{_id}}" value="EDIT" class="infobutt" formaction="/editCars"
+                    form="editCars">
+            </td>
+        </tr>
+        {{/if}}
+
+        {{/each}}
+    </table>
+</div>

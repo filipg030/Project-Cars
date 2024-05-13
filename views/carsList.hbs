@@ -1,0 +1,29 @@
+<div id="mainDiv">
+    <h2>List Cars Page</h2>
+
+    <form method="get" action="/carsList">
+        <table>
+            <tr>
+                <td>ID</td>
+                <td>Ubezpieczony</td>
+                <td>Benzyna</td>
+                <td>Uszkodzony</td>
+                <td>Naped4x4</td>
+                <td></td>
+            </tr>
+            {{#each cars}}
+            <tr>
+                <td>{{_id}}</td>
+                <td>{{ubezpieczony}}</td>
+                <td>{{benzyna}}</td>
+                <td>{{uszkodzony}}</td>
+                <td>{{naped}}</td>
+                <td>
+                    <input type="submit" name="{{_id}}" value="INFO" class="infobutt"
+                        onclick="alert('id: {{_id}} \nubezpieczony: {{ubezpieczony}} \nbenzyna: {{benzyna}} \nuszkodzony: {{uszkodzony}} \nnaped: {{naped}}')">
+                </td>
+            </tr>
+            {{/each}}
+        </table>
+    </form>
+</div>

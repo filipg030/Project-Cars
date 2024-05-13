@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: black;
+    height: 100px;
+    width: 100%;
+}
+
+#mainPage {
+    color: salmon;
+    margin-left: 100px;
+}
+
+nav>a>button {
+    width: 150px;
+    color: white;
+    background-color: black;
+    height: 100px;
+    border: 1px solid black;
+    font-size: 25px;
+}
+
+#mainDiv {
+    margin-left: 150px;
+    margin-top: 100px;
+    font-size: 50px;
+    height: 100vh;
+}
+
+#mainDiv>h1,
+h3 {
+    margin-left: 150px;
+    margin-top: 100px;
+    font-size: 75px;
+}
+
+form {
+    font-size: 40px;
+}
+
+#addSub {
+    height: 60px;
+    width: 100px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+table {
+    width: 90%;
+}
+
+td {
+    padding: 25px;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.infobutt,
+.deletebutt,
+.editbutt {
+    width: fit-content ;
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+.deletebutt {
+    background-color: red;
+}

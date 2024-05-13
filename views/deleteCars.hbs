@@ -1,0 +1,39 @@
+<div id="mainDiv">
+    <h2>Delete Cars Page</h2>
+    <form action="/deleteAll">
+        <input type="submit" value="DELETE ALL" class="deletebutt" onclick="return confirm('Are you sure?')">
+    </form>
+    <form action="/deleteSel" method="GET">
+        <input type="submit" value="DELETE SELECTED" class="deletebutt" onclick="return confirm('Are you sure?')">
+        {{#if number }}
+        <h5>{{number}}</h5>
+        {{/if}}
+        <form method="get" action="/deleteCars">
+            <table>
+                <tr>
+                    <td>ID</td>
+                    <td>Ubezpieczony</td>
+                    <td>Benzyna</td>
+                    <td>Uszkodzony</td>
+                    <td>Naped4x4</td>
+                    <td></td>
+                </tr>
+                {{#each cars}}
+                <tr>
+                    <td>{{_id}}</td>
+                    <td>{{ubezpieczony}}</td>
+                    <td>{{benzyna}}</td>
+                    <td>{{uszkodzony}}</td>
+                    <td>{{naped}}</td>
+                    <td>
+                        <input type="submit" formaction="/deleteCars" name="{{_id}}" value="DELETE" class="deletebutt">
+                    </td>
+                    <td>
+                        <input type="checkbox" formaction="/deleteSel" name="{{_id}}" value="DELETE">
+                    </td>
+                </tr>
+                {{/each}}
+            </table>
+        </form>
+    </form>
+</div>
